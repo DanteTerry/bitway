@@ -24,7 +24,7 @@ async function PropertiesDetails({ params }) {
       {/* property details */}
       <div className="mx-auto mb-10 flex flex-col gap-2 lg:w-[80%] lg:flex-row">
         <div className="mb-2 flex w-full flex-col justify-center gap-2 md:mb-0">
-          <h4 className=" font-playfair text-3xl">{property.name}</h4>
+          <h4 className=" font-playfair text-3xl">{property?.name}</h4>
           <div className="flex items-center gap-2">
             <Image
               src={selectLocation}
@@ -34,8 +34,8 @@ async function PropertiesDetails({ params }) {
               className="inline-block"
             />
             <span>
-              {property.location.street}, {property.location.city},
-              {property.location.state},{property.location.zipcode}
+              {property?.location?.street}, {property?.location?.city},
+              {property?.location?.state},{property?.location?.zipcode}
             </span>
           </div>
           <p className="text-2xl font-bold">$ {property.price}</p>
@@ -54,7 +54,7 @@ async function PropertiesDetails({ params }) {
           <div className="mb-4 flex  items-center gap-5 border-b-2 pb-3 ">
             <h3 className="text-2xl font-bold">Description</h3>
           </div>
-          <p className="mb-10 text-justify">{property.description}</p>
+          <p className="mb-10 text-justify">{property?.description}</p>
 
           <h6 className=" mb-5 text-xl font-bold">Details</h6>
 
