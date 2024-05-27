@@ -1,5 +1,3 @@
-"use client";
-import Image from "next/image";
 import React from "react";
 import { useForm } from "react-hook-form";
 
@@ -9,14 +7,18 @@ function Schedule() {
     formState: { isSubmitting, errors },
     handleSubmit,
   } = useForm();
-  const onsubmit = (data) => {};
-  return (
-    <div className="h-max rounded-lg px-5  lg:w-2/6">
-      <h6 className=" mb-5 text-xl font-bold uppercase">Schedule a tour</h6>
 
-      <div className="mb-5 flex items-center gap-5 border-b-2 pb-4 ">
-        <Image
-          src={`/assets/agents/agent1.svg`}
+  const onSubmit = (data) => {
+    console.log("Request sent");
+  };
+
+  return (
+    <div className="h-max rounded-lg px-5 lg:w-2/6">
+      <h6 className="mb-5 text-xl font-bold uppercase">Schedule a tour</h6>
+
+      <div className="mb-5 flex items-center gap-5 border-b-2 pb-4">
+        <img
+          src="/assets/agents/agent1.svg"
           width={70}
           height={70}
           alt="woman agent image"
@@ -30,7 +32,7 @@ function Schedule() {
       </div>
 
       <div className="flex flex-col gap-5">
-        <form onSubmit={handleSubmit(onsubmit)}>
+        <form onSubmit={handleSubmit(onSubmit)}>
           <div className="w-full">
             <label htmlFor="name" className="mb-2 font-bold">
               Name
@@ -95,7 +97,7 @@ function Schedule() {
           <button
             disabled={isSubmitting}
             className="rounded-xl bg-primary-500 p-3 text-white"
-            onClick={() => console.log("Request sent")}
+            type="submit"
           >
             Send a request
           </button>
