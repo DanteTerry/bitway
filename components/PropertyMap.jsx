@@ -1,3 +1,4 @@
+"use client";
 import { useEffect, useState } from "react";
 import { Map, Marker } from "react-map-gl";
 import Spinner from "./Spinner";
