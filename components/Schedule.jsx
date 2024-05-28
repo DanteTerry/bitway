@@ -1,4 +1,5 @@
 "use client";
+import Image from "next/image";
 import React from "react";
 import { useForm } from "react-hook-form";
 
@@ -18,7 +19,7 @@ function Schedule() {
       <h6 className="mb-5 text-xl font-bold uppercase">Schedule a tour</h6>
 
       <div className="mb-5 flex items-center gap-5 border-b-2 pb-4">
-        <img
+        <Image
           src="/assets/agents/agent1.svg"
           width={70}
           height={70}
